@@ -12,8 +12,10 @@ app.get('/', function (req, res) {
 app.get('/art-one',function(req,res){ res.sendFile(path.join(__dirname, 'ui', 'art-one.html'));
     
 });
-app.get('/art-two',function(req,res){ res.send("article two is requested")});
-app.get('/art-three',function(req,res){ res.send("article three is requested")});
+app.get('/art-two',function(req,res){  res.sendFile(path.join(__dirname, 'ui', 'art-two.html'));
+});
+
+app.get('/art-three',function(req,res){  res.sendFile(path.join(__dirname, 'ui', 'art-three.html'));});
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
